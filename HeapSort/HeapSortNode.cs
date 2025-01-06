@@ -1,5 +1,5 @@
 namespace HeapSort;
-//does not work yet
+
 public class HeapSortNode<T> where T : IComparable<T>
 {
     static LinkedList<T> end = new LinkedList<T>();
@@ -46,6 +46,7 @@ public class HeapSortNode<T> where T : IComparable<T>
             {
                 node[0].
                 leafNodes.AddLast(node[1]);
+                //does not work yet, spoke to professor said we will discuss in class and didnt end up discussing in class
             }
 
             if (node[1].Left != null)

@@ -4,17 +4,18 @@ public class HeapSortClass
 {
     public static void Sort(int[] unsorted)
     {
-        for (int i = (unsorted.Length/2) - 1; i >= 0; i--)
+        for (int i = (unsorted.Length/2) - 1; i >= 0; i--) // from last parent node at Length/2 -1
         {
-            heapify(unsorted, i, unsorted.Length);
+            heapify(unsorted, i, unsorted.Length); //heapify starting from bottom nodes and move up
         }
         
         Console.WriteLine(string.Join(" ", unsorted));
 
         for (int i = unsorted.Length - 1; i >= 0; i--)
         {
+            //go from end and set top (ie highest number) of the heap to the end
             int tempLast = unsorted[i];
-            unsorted[i] = unsorted[0];
+            unsorted[i] = unsorted[0]; 
             unsorted[0] = tempLast;
             
             heapify(unsorted, 0, i);
